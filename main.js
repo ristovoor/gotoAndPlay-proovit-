@@ -256,13 +256,14 @@ canvas.addEventListener('click', () => {
 let updateAll = function(){
     requestAnimationFrame(updateAll);
     context.clearRect(0,0,window_width,window_height)
-    backgroundAddOns.update();
+    
     allFireworks.forEach(element => {
         if ( allFireworks[0].timeCreated > 120 ){
             allFireworks.shift();
         }
         element.update();
     })
+    backgroundAddOns.update();
 
 }
 
